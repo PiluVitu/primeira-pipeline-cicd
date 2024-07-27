@@ -29,5 +29,14 @@ jobs:
           context: ./src
           push: true
           tags: |
-            piluvitu/aula-primeira-pipiline:v${{github.run_number}}
-            piluvitu/aula-primeira-pipiline:latest
+            piluvitu/template-go:v${{github.run_number}}
+            piluvitu/template-go:latest
+  CD:
+    runs-on: ubuntu-22.04
+    needs: CI
+    steps:
+      - name: Pegando código do repo
+        uses: actions/checkout@v4
+
+      - name: Base de CD
+        run: echo("Miapika")
