@@ -25,3 +25,9 @@ jobs:
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v6.5.0
+        with:
+          context: ./src
+          push: true
+          tags: |
+            piluvitu/aula-primeira-pipiline:v${{github.run_number}}
+            piluvitu/aula-primeira-pipiline:latest
