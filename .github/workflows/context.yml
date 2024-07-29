@@ -2,6 +2,8 @@ name: Como usar variavel de ambiente e contexto do GitHub Actions
 on: 
     push:
         branches: [main]
+    pull_request: 
+        branches: [main]
     workflow_dispatch:
       
 env:
